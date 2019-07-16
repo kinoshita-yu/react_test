@@ -1,0 +1,10 @@
+version: "2"
+services:
+  node:
+    build: ./docker/node
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/react_test
+    ports:
+      - "127.0.0.1:3002:3000"
